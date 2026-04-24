@@ -88,9 +88,9 @@ curl -X DELETE http://localhost:8080/api/v1/rooms/CAV-101
 ```
 
 
-## Report — Question Answers
+## Report Question Answers
 
-### Part 1.1 — JAX-RS Resource Lifecycle
+### Part 1.1 JAX-RS Resource Lifecycle
 By default JAX-RS creates a new instance of a resource class for every request that comes in. This means classes like RoomResource and SensorResource are not singletons. Because of this I cannot store data inside the resource classes themselves as it would be lost after each request. To fix this I created a DataStore class which is a singleton that holds all the data in ConcurrentHashMaps. All the resource classes call DataStore.getInstance() to access the same shared data. I used ConcurrentHashMap instead of a regular HashMap because multiple requests can come in at the same time and a regular HashMap is not thread safe which could cause data corruption.
 
 ### Part 1.2 HATEOAS
