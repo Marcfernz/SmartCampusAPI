@@ -1,4 +1,4 @@
-Smart Campus API
+# Smart Campus API
 Overview
 This is my Smart Campus API built for the 5COSC022W Client-Server Architectures coursework. The API is built using JAX-RS with Jersey and runs on an embedded Grizzly HTTP server so there is no need to install a separate server like Tomcat. It manages campus Rooms and Sensors and keeps a historical log of Sensor Readings. I used in-memory data structures like ConcurrentHashMap to store all the data as no database is allowed.
 
@@ -34,29 +34,6 @@ bashmvn exec:java
 The API will be available at http://localhost:8080/api/v1
 
 
-Sample curl Commands
-1. Get API Discovery
-bashcurl -X GET http://localhost:8080/api/v1
-2. Create a Room
-bashcurl -X POST http://localhost:8080/api/v1/rooms \
-  -H "Content-Type: application/json" \
-  -d '{"id":"CAV-101","name":"Cavendish Lecture Hall","capacity":120}'
-3. Get All Rooms
-bashcurl -X GET http://localhost:8080/api/v1/rooms
-4. Create a Sensor
-bashcurl -X POST http://localhost:8080/api/v1/sensors \
-  -H "Content-Type: application/json" \
-  -d '{"id":"CAV-TEMP-01","type":"Temperature","status":"ACTIVE","currentValue":21.3,"roomId":"CAV-101"}'
-5. Get Sensors filtered by type
-bashcurl -X GET "http://localhost:8080/api/v1/sensors?type=Temperature"
-6. Add a Sensor Reading
-bashcurl -X POST http://localhost:8080/api/v1/sensors/CAV-TEMP-01/readings \
-  -H "Content-Type: application/json" \
-  -d '{"value":22.4}'
-7. Get All Readings for a Sensor
-bashcurl -X GET http://localhost:8080/api/v1/sensors/CAV-TEMP-01/readings
-8. Try deleting a Room with Sensors (409 error)
-bashcurl -X DELETE http://localhost:8080/api/v1/rooms/CAV-101
 
 ## Sample curl Commands
 
