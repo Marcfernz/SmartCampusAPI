@@ -2,8 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.smartcampusapi;
+package com.mycompany.smartcampusapi.config;
 
+import com.mycompany.smartcampusapi.resources.*;
+import com.mycompany.smartcampusapi.mappers.*;
+import com.mycompany.smartcampusapi.filters.LoggingFilter;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 import java.util.HashSet;

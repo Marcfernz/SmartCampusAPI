@@ -2,8 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.smartcampusapi;
+package com.mycompany.smartcampusapi.resources;
 
+import com.mycompany.smartcampusapi.exceptions.RoomNotEmptyException;
+import com.mycompany.smartcampusapi.models.Room;
+import com.mycompany.smartcampusapi.storage.DataStore;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;

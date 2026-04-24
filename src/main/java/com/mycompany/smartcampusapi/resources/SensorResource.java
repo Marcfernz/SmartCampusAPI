@@ -1,5 +1,8 @@
-package com.mycompany.smartcampusapi;
+package com.mycompany.smartcampusapi.resources;
 
+import com.mycompany.smartcampusapi.exceptions.LinkedResourceNotFoundException;
+import com.mycompany.smartcampusapi.models.Sensor;
+import com.mycompany.smartcampusapi.storage.DataStore;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;

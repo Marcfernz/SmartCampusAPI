@@ -3,8 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.mycompany.smartcampusapi;
+package com.mycompany.smartcampusapi.mappers;
 
+import com.mycompany.smartcampusapi.exceptions.LinkedResourceNotFoundException;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;

@@ -2,26 +2,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.smartcampusapi;
+package com.mycompany.smartcampusapi.mappers;
 
-/**
- *
- * @author marc
- */
+import com.mycompany.smartcampusapi.exceptions.RoomNotEmptyException;
+
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
+
+/**
+ *
+ * @author marc
+ */
 @Provider
-public class GlobalExceptionMapper implements ExceptionMapper<Throwable> {
+public class RoomNotEmptyExceptionMapper implements ExceptionMapper<RoomNotEmptyException> {
 
     @Override
-    public Response toResponse(Throwable ex) {
-        return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+    public Response toResponse(RoomNotEmptyException ex) {
+        return Response.status(Response.Status.CONFLICT)
                 .type(MediaType.APPLICATION_JSON)
-                .entity("{\"error\": \"An unexpected error occurred. Please try again later.\"}")
+                .entity("{\"error\": \"" + ex.getMessage() + "\"}")
                 .build();
     }
 }
-

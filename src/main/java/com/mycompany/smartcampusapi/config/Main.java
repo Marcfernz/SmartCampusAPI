@@ -7,7 +7,7 @@
  *
  * @author marc
  */
-package com.mycompany.smartcampusapi;
+package com.mycompany.smartcampusapi.config;
 
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
