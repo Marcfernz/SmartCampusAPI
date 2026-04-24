@@ -13,25 +13,29 @@ Java JDK 11 or higher
 Maven installed
 Any Java IDE (I used NetBeans)
 
-Steps
+### Steps
 
-Clone the repository:
+1. Clone the repository:
+```bash
+git clone https://github.com/Marcfernz/SmartCampusAPI.git
+```
 
-bashgit clone https://github.com/Marcfernz/SmartCampusAPI.git
+2. Navigate to the project folder:
+```bash
+cd SmartCampusAPI
+```
 
-Navigate to the project folder:
+3. Build the project:
+```bash
+mvn clean install
+```
 
-bashcd SmartCampusAPI
+4. Run the server:
+```bash
+mvn exec:java
+```
 
-Build the project:
-
-bashmvn clean install
-
-Run the server:
-
-bashmvn exec:java
-
-The API will be available at http://localhost:8080/api/v1
+5. The API will be available at `http://localhost:8080/api/v1`
 
 
 
