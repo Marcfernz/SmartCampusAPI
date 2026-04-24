@@ -1,5 +1,5 @@
 # Smart Campus API
-Overview
+## Overview
 This is my Smart Campus API built for the 5COSC022W Client-Server Architectures coursework. The API is built using JAX-RS with Jersey and runs on an embedded Grizzly HTTP server so there is no need to install a separate server like Tomcat. It manages campus Rooms and Sensors and keeps a historical log of Sensor Readings. I used in-memory data structures like ConcurrentHashMap to store all the data as no database is allowed.
 
 Base URL: http://localhost:8080/api/v1
